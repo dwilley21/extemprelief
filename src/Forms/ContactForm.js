@@ -1,10 +1,87 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-function ContactForm() {
-  return (
-    <>
-    <h1>Contact form works</h1>
-    </>
-  );
+import FormUserDetails from '../Userdata/FormUserDetails';
+import FormPersonalData from '../Userdata/FormPersonalData';
+import Confirm from '../UI/Confirm';
+import Success from '../UI/Success';
+export class Contact extends Component {
+    state = {
+        step: 1, 
+        firstName: '', 
+        lastName: '', 
+        email: '',
+        occupation: '',
+        city: '',
+        bio: '',
+    }
+// Proceed to next step
+
+nextStep = () => {
+    const { step } = this.state;
+    this.setState({
+        step: step+1
+    }); 
 }
-export default ContactForm;
+
+//Going back a step
+
+prevstep = () => {
+    const { step } = this.state;
+    this.setState({
+        step: step - 1
+    }); 
+}
+
+//Handle fields change 
+
+handleChange = input => e => {
+    this.setState({[input]: e.target.value });
+}
+
+    render() {
+        const { step } = this.state; 
+        const {firstName, lastName, email, occupation, city, bio } = this.state; 
+        const values = {firstName, lastName, email, occupation, city, bio }
+        
+        // eslint-disable-next-line default-case
+        switch(step) {
+            case 1: 
+                return (
+                    <FormUserDetails 
+                        nextStep={this.nextStep}
+                        handleChange={this.handleChange}
+                        values={values}
+                    />
+                );
+            case 2:
+                 return (
+                      <FormPersonalData 
+                           nextStep={this.nextStep}
+                           prevstep={this.prevstep}
+                            handleChange={this.handleChange}
+                            values={values}
+                        />
+                    );
+             case 3:
+                    return (
+                        <Confirm
+                             nextStep={this.nextStep}
+                             prevstep={this.prevstep}
+                              values={values}
+                          />
+                      );
+            case 4:
+                return <Success />;
+        }
+    
+
+        return (
+            
+            <div>
+                
+            </div>
+        )
+    }
+}
+
+export default Contact
