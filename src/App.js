@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import styled from 'styled-components';
 
 import HomeScreen from './Main/HomeScreen';
 import About from './Main/About';
@@ -9,16 +10,20 @@ import HomeNav from './UI/HomeNav';
 import Order from './Main/Order';
 
 
+const Wrapper = styled.div`
+       margin: 10px; 
+`
+
 function App() {
   return (
-    <div className="App">
+    <Wrapper className="App">
     <HomeScreen/>
     <HomeNav />
     <About />
     <ContactForm />
     <Order />
     <Checkout />
-    </div>
+    </Wrapper>
   );
 }
 export default App;
