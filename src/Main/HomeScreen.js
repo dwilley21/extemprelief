@@ -1,9 +1,16 @@
 import React from 'react';
+import styled from 'styled-components';
 
+const Section = styled.div`
+  margin: 20px; 
+  padding: 20px; 
+`
 function HomeScreen() {
   return (
     <>
-    <h1>Extemp Relief</h1>
+    <Section>
+      <h1>Extemp Relief</h1>
+    </Section>
     </>
   );
 }
