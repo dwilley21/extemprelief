@@ -1,11 +1,18 @@
 import React, { Component } from 'react'
+import styled from 'styled-components';
+
+const Wrapper = styled.div`
+ display: flex; 
+ flex-direction: row;
+ justify-content: center; 
+`
 
 export class Success extends Component {
     render() {
         return (
-            <div>
-                Congrats on the sucess! 
-            </div>
+            <Wrapper>
+                Thank you for submitting your information
+            </Wrapper>
         )
     }
 }
