@@ -13,37 +13,39 @@ import {
   Link
 } from "react-router-dom";
 
-const FlexIt =styled.div `
+const FlexIt = styled.div `
  display: flex; 
  flex-direction: row;
  justify-content: center;
 `
 const Tags = styled.div `
-  padding: 10px; 
-  hover{
-    font-size: 100px;
+  padding: 40px; 
+  text-decoration: none;
+  &:hover{
+   font-size: 1.25em;
   }
 `
+
 function HomeNav() {
   return (
     <>
     <Router>
         <nav>
           <FlexIt>
+            {/* <Tags>
+              <Link style={{ textDecoration: 'none', color: 'black'}} to="/">Home</Link>
+            </Tags> */}
             <Tags>
-              <Link to="/">Home</Link>
+              <Link style={{ textDecoration: 'none', color: 'black'}} to="/About">About</Link>
             </Tags>
             <Tags>
-              <Link to="/About">About</Link>
+              <Link style={{ textDecoration: 'none', color: 'black'}} to="/Order">Order</Link>
             </Tags>
             <Tags>
-              <Link to="/Order">Order</Link>
+              <Link style={{ textDecoration: 'none', color: 'black'}} to="/Services">Services</Link>
             </Tags>
             <Tags>
-              <Link to="/Services">Services</Link>
-            </Tags>
-            <Tags>
-              <Link to="/Contact">Contact</Link>
+              <Link style={{ textDecoration: 'none', color: 'black'}} to="/Contact">Contact</Link>
             </Tags>          
           </FlexIt>
           <Route exact path='/' component={HomeScreen}/>
