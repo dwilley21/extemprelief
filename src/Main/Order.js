@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Checkout from '../Forms/Checkout';
 
 const Section = styled.div`
   margin: 20px; 
@@ -10,7 +11,7 @@ function Order() {
   return (
     <>
     <Section>
-    <h1>Order works</h1>
+    <Checkout />
     </Section>
     </>
   );
