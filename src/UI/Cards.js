@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Checkout from '../Forms/Checkout';
 
 const Wrapper = styled.div` 
   padding: 50px;
@@ -44,7 +45,7 @@ const Cards = ({
     <Title>{title}</Title>
     <Price>{price}</Price>
     <Description>{description}</Description>
-    <BuyButton>Buy</BuyButton>
+    <Checkout>Buy</Checkout>
   </Wrapper>
 )
 
