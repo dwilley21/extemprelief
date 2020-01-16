@@ -3,12 +3,15 @@ import styled from 'styled-components';
 import Checkout from '../Forms/Checkout';
 
 const Wrapper = styled.div` 
-  padding: 50px;
+  margin: 20px; 
+  padding: 35px;
+  border: 2px solid black; 
 `
 
 const Title =styled.h2`
   color: black; 
   font-weight: 300; 
+  border-bottom: 2px solid dodgerblue;
   @media (max-wdth: 500px){
     font-size: 1rem;
   }
@@ -16,8 +19,8 @@ const Title =styled.h2`
 
 const Price = styled.div`
   color: black; 
-  font-weight: 300;
-  margin: 6px 0; 
+  font-weight: 300; 
+  margin: 20px; 
   @media (max-wdth: 500px){
     font-size: .8rem;
   }
@@ -40,11 +43,11 @@ const Cards = ({
   title, 
   price, 
   description
-}) =>(
+}) => (
   <Wrapper>
     <Title>{title}</Title>
-    <Price>{price}</Price>
     <Description>{description}</Description>
+    <Price>{price}</Price>
     <Checkout>Buy</Checkout>
   </Wrapper>
 )

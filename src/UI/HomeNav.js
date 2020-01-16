@@ -21,8 +21,9 @@ const FlexIt = styled.div `
 const Tags = styled.div `
   padding: 40px; 
   text-decoration: none;
+  font-size: 1.5em;
   &:hover{
-   font-size: 1.25em;
+   font-size: 1.75em;
   }
 `
 

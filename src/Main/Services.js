@@ -6,19 +6,19 @@ import styled from 'styled-components';
 const Section = styled.div`
   margin: 20px; 
   padding: 20px; 
+  width: fit-content;
 `
 const FlexIt = styled.div`
  display: flex; 
  flex-direction: row;
  justify-content: center; 
-  
 `
 
 
 function Services() {
   return (
     <>
-    <Section>
+   
     <FlexIt>
       <Cards
       title="Title"
@@ -70,7 +70,6 @@ function Services() {
     description="This is the shit"
     />
     </FlexIt>
-      </Section>
     </>
   );
 }
