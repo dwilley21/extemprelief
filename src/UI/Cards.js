@@ -8,7 +8,7 @@ const Wrapper = styled.div`
   border: 2px solid black; 
 `
 
-const Title =styled.h2`
+const Title = styled.h2`
   color: black; 
   font-weight: 300; 
   border-bottom: 2px solid dodgerblue;
